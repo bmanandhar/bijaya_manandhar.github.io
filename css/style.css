@@ -1,0 +1,199 @@
+body {
+    margin: 1%;
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    height: 1060px;
+}
+
+.nav-bar {
+    width: 9vw;
+    height: 1050px;
+    background-color: lightseagreen;
+}
+
+.my-image {
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.self-image {
+    width: 140px;
+    margin: 14px;
+    border-radius: 3px;
+    border: 1px magenta solid;
+}
+
+#navigation {
+    margin: 5px;
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: lawngreen;
+    text-align: center;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    border: 2px black;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.main {
+    width: 90vw;
+}
+
+.img00 {
+    max-width: 100%;
+    height: auto;
+}
+
+.home {
+    background-color: green;
+}
+
+.about {
+    background-color: yellow;
+}
+
+
+.projects {
+    background-color: peru;
+}
+
+
+.experiences {
+    background-color: royalblue;
+}
+
+
+.travel {
+    background-color: turquoise;
+}
+
+
+.hobbies {
+    background-color:khaki;
+}
+
+
+.twitter {
+    background-color: gold;
+}
+
+
+.facebook {
+    background-color: olive;
+}
+
+
+.github {
+    background-color: teal;
+}
+
+.codepen {
+    background-color: limegreen;
+}
+
+.codewars {
+    background-color: hotpink;
+}
+
+.linkedin {
+    background-color: coral;
+}
+
+.contact {
+    background-color: bisque;
+}
+
+.main {
+    display: flex-column;
+    width: 92vw;   
+}
+
+header {
+    display: flex;
+    background-color: lightslategrey;
+    height: 10vh;
+}
+
+#name {
+    width: 30vw;
+    margin: 10px 0 10px 20px;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#drive {
+    width: 70vw;
+    margin: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+h1 {
+    float: left;
+    font-family: cursive;
+}
+
+h2 {
+    float: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.content {
+    overflow: scroll;
+    height: 1000px;
+}
+
+#intro {
+    height: 84vh;
+    display: flex;
+    background-color: black;
+}
+
+#img00 {
+    height: 84vh;
+    margin: 1px 0px;
+    max-width: 60vw;
+    margin: 1px;
+    border-radius: 2px;
+
+}
+
+#intro-para {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    margin: 5px;
+    color: white;
+    max-width: 40vw;
+}
+
+.border-between{
+    height: 50px;
+    background-color: lightgreen;
+}
+
+@media all and (max-width: 499px) {
+    #intro {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+      /*align-items: baseline;*/
+    }
+  }
+  
+
+.img-list {
+    display: ;
+}
+
