@@ -1,0 +1,106 @@
+
+<!Doctype html>
+<html>
+	<head>
+		<title>Simple Slider</title>
+		<link rel="stylesheet" href="css/style.css">
+				
+	</head>
+	<body>
+		<h1>This is travel document</h1>
+		<!-- Container for Slider and Navigation Controls -->
+		<div class="gallery">
+			<h2>Photo Slider (slide left / right)</h2>
+			<!-- The actual moving Slider -->
+			<div class="slider">
+				<ul>
+                    <li><img src="images/img00.jpg" class="slides" alt="Image00"></li>
+					<li><img src="images/img01.jpg" class="slides" alt="Image01"></li>
+					<li><img src="images/img02.jpg" class="slides" alt="Image02"></li>
+					<li><img src="images/img03.jpg" class="slides" alt="Image03"></li>
+                    <li><img src="images/img04.jpg" class="slides" alt="Image04"></li>
+                    <li><img src="images/img05.jpg" class="slides" alt="Image05"></li>
+					<li><img src="images/img06.jpg" class="slides" alt="Image06"></li>
+					<li><img src="images/img07.jpg" class="slides" alt="Image07"></li>
+					<li><img src="images/img08.jpg" class="slides" alt="Image08"></li>
+                    <li><img src="images/img09.jpg" class="slides" alt="Image09"></li>
+
+                    <li><img src="images/img10.jpg" class="slides" alt="Image10"></li>
+					<li><img src="images/img11.jpg" class="slides" alt="Image11"></li>
+					<li><img src="images/img12.jpg" class="slides" alt="Image12"></li>
+					<li><img src="images/img13.jpg" class="slides" alt="Image13"></li>
+                    <li><img src="images/img14.jpg" class="slides" alt="Image14"></li>
+                    <li><img src="images/img15.jpg" class="slides" alt="Image15"></li>
+					<li><img src="images/img16.jpg" class="slides" alt="Image16"></li>
+					<li><img src="images/img17.jpg" class="slides" alt="Image17"></li>
+					<li><img src="images/img18.jpg" class="slides" alt="Image18"></li>
+                    <li><img src="images/img19.jpg" class="slides" alt="Image19"></li>
+
+                    <li><img src="images/img20.jpg" class="slides" alt="Image20"></li>
+					<li><img src="images/img21.jpg" class="slides" alt="Image21"></li>
+					<li><img src="images/img22.jpg" class="slides" alt="Image22"></li>
+					<li><img src="images/img23.jpg" class="slides" alt="Image23"></li>
+                    <li><img src="images/img24.jpg" class="slides" alt="Image24"></li>
+                    <li><img src="images/img25.jpg" class="slides" alt="Image25"></li>
+					<li><img src="images/img26.jpg" class="slides" alt="Image26"></li>
+					<li><img src="images/img27.jpg" class="slides" alt="Image27"></li>
+					<li><img src="images/img28.jpg" class="slides" alt="Image28"></li>
+                    <li><img src="images/img29.jpg" class="slides" alt="Image29"></li>
+
+					<li><img src="images/img30.jpg" class="slides" alt="Image30"></li>
+					<li><img src="images/img31.jpg" class="slides" alt="Image30"></li>
+				</ul>
+			</div>
+			<!-- Navigation Button Controls -->
+			<div id="slider-nav">
+				<button data-dir="prev">Previous</button>
+				<button data-dir="next" style="float:right;">Next</button>
+			</div>
+		</div>
+		<!-- Loading JavaScript Codes. -->
+		<script src="js/scripts/jquery-3.3.1.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+			// 
+			jQuery(document).ready(function ($) {
+				// creating a container variable to hold the 'UL' elements. It uses method chaining.
+				var container=$('div.slider').css('overflow','hidden').children('ul');
+				
+				/* 
+				On the event of mouse-hover, 
+					i) Change the visibility of Button Controls.
+					ii) SET/RESET the "intv" variable to switch between AutoSlider and Stop mode.
+				*/
+				$('.gallery').hover(function( e ){
+					$('#slider-nav').toggle();
+					return e.type=='mouseenter'?clearInterval(intv):autoSlider();
+				});
+				
+				// Creating the 'slider' instance which will set initial parameters for the Slider.
+				var sliderobj= new slider(container,$('#slider-nav'));
+				/*
+				This will trigger the 'setCurrentPos' and 'transition' methods on click of any button
+				 "data-dir" attribute associated with the button will determine the direction of sliding.
+				*/
+				sliderobj.nav.find('button').on('click', function(){
+					sliderobj.setCurrentPos($(this).data('dir'));
+					sliderobj.transition();
+				});
+				
+				autoSlider(); // Calling autoSlider() method on Page Load.
+				
+				/* 
+				This function will initialize the interval variable which will cause execution of the inner function after every 2 seconds automatically.
+				*/
+				function autoSlider()
+				{
+					return intv = setInterval(function(){
+						sliderobj.setCurrentPos('next');
+						sliderobj.transition();
+					}, 2000);
+				}
+				
+			});
+		</script>
+	</body>
+</html>

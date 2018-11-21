@@ -23,3 +23,19 @@ $('.prev, .next').click(function(e){
    if( start == 0 ) list.hide().filter(':lt('+(end)+')').show();
    else list.hide().filter(':lt('+(end)+'):gt('+(start-1)+')').show();
 });
+
+
+
+let colorDots =
+    [ 
+    "white",
+    "purple",
+    "yellow", 
+    "green", 
+    "skyblue", 
+    "lightseagreen", 
+    "peru", 
+    "gold",
+    "red",
+    "teal"
+    ]

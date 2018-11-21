@@ -1,0 +1,50 @@
+
+Copy
+*
+{
+	margin:0;
+	padding:0;
+}
+
+h2 {
+	color: white;
+	font-weight: 400;
+}
+
+img {
+	height: 350px;
+	border: 5px whitesmoke solid;
+}
+
+.gallery
+{
+	width:840px;
+	height:670px;
+	margin:10px auto;
+	background: #000000;
+	border:1px solid orange;
+}
+
+.slider
+{
+	width:inherit;
+	height:344px;
+	overflow:scroll;
+}
+.slider ul
+{
+	width:10000px;
+	list-style:none;
+	margin-left:0px;
+}
+.slider li
+{
+	float:left;
+}
+
+#slider-nav
+{
+	display:none; /* This is important to hide the buttons if jQuery is Not supported. */
+	margin-top: -10em;
+	cursor: pointer;		
+}

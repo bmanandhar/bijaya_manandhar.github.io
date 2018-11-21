@@ -17,3 +17,9 @@ This project is being developed to meet requirements to graduate the WDI-49 at G
 * JavaScript used for DOM modification
 * CSS used for styling
 * Some demos on animation
+
+
+Misc:
+https://code.jquery.com/jquery-2.1.0.js
+Slider-image
+https://www.journaldev.com/4293/jquery-image-slider-css
