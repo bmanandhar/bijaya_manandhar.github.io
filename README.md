@@ -43,3 +43,5 @@ https://www.journaldev.com/4293/jquery-image-slider-css
   * Places travelled
 
 >>>>>>> 84dc03d70b302cdcfc56e9f3eff005fec57bfd6e
+
+https://www.youtube.com/watch?v=5CqlxP3AlwM
